@@ -13,5 +13,9 @@ return {
   keys = {
     { '<leader>te', ':Neotree toggle<CR>', desc = '[T]oggle [E]xplorer', silent = true },
   },
-  opts = {},
+  opts = {
+    window = {
+      position = 'right',
+    },
+  },
 }
