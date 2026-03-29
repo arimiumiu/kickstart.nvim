@@ -17,5 +17,12 @@ return {
     window = {
       position = 'right',
     },
+    filesystem = {
+      filtered_items = {
+        visible = true, -- show gitignored/hidden files dimmed; toggle with `H`
+        hide_gitignored = false,
+        hide_hidden = false,
+      },
+    },
   },
 }
