@@ -4,6 +4,37 @@
 -- See the kickstart.nvim README for more information
 return {
   {
+    'akinsho/bufferline.nvim',
+    version = '*',
+    dependencies = { 'nvim-tree/nvim-web-devicons' },
+    event = 'VimEnter',
+    opts = {
+      options = {
+        offsets = {
+          {
+            filetype = 'neo-tree',
+            text = 'Explorer',
+            highlight = 'Directory',
+            separator = true,
+          },
+        },
+        custom_filter = function(buf_number)
+          return vim.bo[buf_number].buftype ~= 'terminal'
+        end,
+      },
+    },
+  },
+  {
+    'akinsho/toggleterm.nvim',
+    version = '*',
+    opts = {
+      size = 15,
+      open_mapping = [[<leader>tt]],
+      direction = 'horizontal',
+      shade_terminals = true,
+    },
+  },
+  {
     'lervag/vimtex',
     lazy = false,
     init = function()

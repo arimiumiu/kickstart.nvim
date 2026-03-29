@@ -23,6 +23,8 @@ return {
         hide_gitignored = false,
         hide_hidden = false,
       },
+      use_libuv_file_watcher = true, -- auto-refresh on filesystem changes (e.g. after git commands)
+      follow_current_file = { enabled = true }, -- keep tree focused on current file
     },
   },
 }
