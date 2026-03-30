@@ -30,6 +30,7 @@ return {
     opts = {
       size = 15,
       open_mapping = [[<leader>tt]],
+      insert_mappings = false,
       terminal_mappings = false,
       direction = 'horizontal',
       shade_terminals = true,
